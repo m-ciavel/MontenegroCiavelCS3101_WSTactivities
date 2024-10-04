@@ -32,6 +32,33 @@ body {
 }
 /*end of about me header*/
 
+
+@keyframes waveslideDown {
+    0% {
+        transform: translateY(-20%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/*wave on contacts*/
+#wave {
+    animation: 0.2s ease-out 0s 1 waveslideDown;
+}
+
+    .wave-container {
+        background: #ffffff;
+    }
+
+        .wave-container > svg {
+            display: block;
+        }
+
+
+
 /*flex content */
 .container{
     margin-top: 5%;
