@@ -1,0 +1,17 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    margin: auto;
+    background: #25160a;
+    color: #f4d4be; 
+    height: 100%;
+}
+
+    body {
+        margin: 0;
+    }
