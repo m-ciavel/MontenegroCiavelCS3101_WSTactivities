@@ -7,11 +7,60 @@
 }
 
 html, body {
-    height: 100%; /* Ensure they take up the full height of the viewport */
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
+/*nightmode */
+body.night-mode, html.night-mode {
+    background-color: #2c2c2c;
+    color: #fff; 
+}
+
+    .night-mode .title h1, .night-mode .container {
+        color: #fff;
+    }
+
+    .night-mode .item {
+        background-color: #444;
+        border-color: #666;
+    }
+
+        .night-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+            .night-mode-toggle i {
+                font-size: 20px; 
+            }
+
+
+            .night-mode-toggle:hover {
+                background-color: #444;
+            }
+
+            .night-mode-toggle:focus {
+                outline: none;
+            }
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
 
 /*about me header*/
 .title {
@@ -175,113 +224,3 @@ html, body {
             }
 
 
-body.night-mode, html.night-mode {
-    background-color: #2c2c2c;
-    color: #fff; 
-}
-
-.night-mode .title h1, .night-mode .container {
-    color: #fff;
-}
-
-.night-mode .item {
-    background-color: #444;
-    border-color: #666;
-}
-
-    .night-mode-toggle {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-        .night-mode-toggle i {
-            font-size: 20px; 
-        }
-
-
-        .night-mode-toggle:hover {
-            background-color: #444;
-        }
-
-        .night-mode-toggle:focus {
-            outline: none;
-        }
-
-body {
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.fireworks-toggle {
-    position: fixed;
-    bottom: 90px; /* Slightly above the night mode button */
-    right: 20px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.fireworks-toggle:hover {
-    background-color: #444;
-}
-
-.fireworks-toggle:focus {
-    outline: none;
-}
-
-/* Fireworks Container */
-#fireworksContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 9999; /* Ensure fireworks are on top */
-    display: none; /* Hidden by default */
-}
-
-.fireworks {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #ff0;
-    border-radius: 50%;
-    animation: fireworksAnimation 1s ease-out infinite;
-}
-
-@keyframes fireworksAnimation {
-    0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: translate(var(--x), var(--y)) scale(3);
-        opacity: 0.7;
-    }
-    100% {
-        transform: translate(var(--x), var(--y)) scale(1);
-        opacity: 0;
-    }
-}
